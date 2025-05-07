@@ -13,12 +13,12 @@ export const Login = () => {
     i18n: { currentLocale },
   } = useDocusaurusContext();
 
-  const handleClick = () => {
+  const handleFallbackLogin = () => {
     window.location.assign(getUrl(currentLocale));
   };
 
   const { handleLogin } = useHandleLogin({
-    onClickLogin: handleClick,
+    onClickLogin: handleFallbackLogin,
   });
 
   return (
